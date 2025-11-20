@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "monocraft"; /* Имя, под которым мы будем использовать шрифт */
+  src: url(fonts/Monocraft.otf) format("opentype"); /* Путь к файлу шрифта */
+}
+
+body {
+  font-family: "monocraft", Arial, sans-serif; /* Основной шрифт сайта */
+  margin: 0; /* Убираем внешние отступы браузера */
+  padding: 0; /* Убираем внутренние отступы */
+  background: linear-gradient(
+    300deg,
+    #ffbdff,
+    #ffcce6,
+    #ffd6ff,
+    #f0eaff
+  ); /* Градиентный фон */
+  color: #333; /* Цвет текста */
+  background-size: 400% 400%; /* Растягиваем фон для плавной анимации */
+  animation: gradientMove 15s ease infinite; /* Анимация движения градиента */
+}
+
+/* Анимация фона (градиент двигается) */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%; /* Начальная позиция */
+  }
+  50% {
+    background-position: 100% 50%; /* Фон смещается вправо */
+  }
+  100% {
+    background-position: 0% 50%; /* Возврат */
+  }
+}
+
+header {
+  padding: 20px; /* Отступы внутри шапки */
+  text-align: center; /* Центрирование текста */
+  border-bottom: 3px solid #ffd6ff; /* Нижняя граница */
+  box-shadow: 0 0 5px #ffd6ff, 0 0 10px #d1c7ff; /* Мягкое свечение */
+}
+
+/* Заголовок внутри header */
+header h1 {
+  margin-top: 10px; /* Отступ сверху */
+  font-size: 3em; /* Размер шрифта */
+  padding: 10px; /* Внутренние отступы */
+  text-shadow: 0 0 5px #ffd6ff, 0 0 10px #947cff, 2px 2px 2px #3a3a3a;
+  /* Тень и свечение текста */
+}
+
+/* Ссылки меню */
+header nav a {
+  margin: 0 10px; /* Расстояние между ссылками */
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #333; /* Цвет текста */
+  font-weight: bold; /* Жирный текст */
+  display: inline-block; /* Чтобы работала трансформация */
+  transition: transform 0.3s, color 0.3s ease; /* Плавная анимация */
+  font-size: 25px; /* Размер шрифта */
+}
+
+/* Анимация при наведении на ссылку */
+header nav a:hover {
+  transform: scale(1.2); /* Увеличение */
+  color: #ffd6ff; /* Изменение цвета */
+  text-shadow: 0 0 5px #ffd6ff, 0 0 10px #947cff; /* Свечение */
+}
+
+.intro {
+  text-align: center; /* Центрирование текста */
+  padding-top: 20px; /* Отступ сверху */
+  padding-bottom: 20px; /* Отступ снизу */
+  color: #333; /* Цвет текста */
+  font-size: 20px; /* Размер шрифта */
+  border-bottom: 3px solid #ffd6ff; /* Линия снизу */
+  box-shadow: 0 0 5px #ffd6ff, 0 0 10px #d1c7ff; /* Свечение */
+}
+
+/* Фото профиля */
+.about_img {
+  width: 250px; /* Ширина */
+  height: 250px; /* Высота */
+  border-radius: 50%; /* Делаем изображение круглым */
+  display: block; /* Блочный элемент */
+  margin: 0 auto 20px auto; /* Центровка изображения */
+  padding: 10px; /* Внутренний отступ */
+  box-shadow: 0 0 10px #ffd6ff, 0 0 20px #947cff; /* Свечение */
+}
+
+.projects {
+  text-align: center; /* Центрирование */
+  padding: 20px; /* Отступы */
+  border-bottom: 3px solid #ffd6ff; /* Линия */
+  box-shadow: 0 0 5px #ffd6ff, 0 0 10px #d1c7ff;
+}
+
+/* Контейнер всех карточек */
+.projects_container {
+  display: flex; /* Flexbox */
+  justify-content: center; /* Выровнять по центру */
+  gap: 10px; /* Расстояние между карточками */
+  flex-wrap: wrap; /* Позволяем переноситься на новую строку */
+}
+
+/* Заголовок блока */
+.projects h2 {
+  font-size: 2.5em; /* Размер текста */
+  margin-bottom: 20px; /* Отступ */
+}
+
+/* Карточка проекта */
+.card_project {
+  background: linear-gradient(135deg, #ffd6ff, #f0eaff); /* Градиент */
+  border-radius: 15px; /* Скругление */
+  padding: 20px; /* Внутренние отступы */
+  width: 300px; /* Ширина */
+  box-shadow: 0 0 10px #ffd6ff, 0 0 20px #947cff; /* Свечение */
+  transition: transform 0.3s, box-shadow 0.3s ease; /* Анимация */
+}
+
+/* Анимация поднятия карточки */
+.card_project:hover {
+  transform: translateY(-10px); /* Поднимаем вверх */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Усиливаем тень */
+}
+
+/* Фото в карточке */
+.img_card {
+  width: 250px; /* Размер */
+  height: 250px;
+  object-fit: cover; /* Сохраняет пропорции */
+  border-radius: 15%; /* Скругление */
+  margin-bottom: 15px; /* Отступ */
+}
+
+/* Заголовок карточки */
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Описание проекта */
+.project-card p {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #555;
+}
+
+.sakura {
+  position: absolute; /* Лепестки поверх шапки */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Чтобы не мешали клику */
+  overflow: hidden; /* Обрезает лишнее */
+}
+
+/* Лепестки */
+.sakura span {
+  position: absolute;
+  top: -50px; /* Начинают падать сверху */
+  font-size: 24px; /* Размер лепестков */
+  color: #ffb6c1; /* Цвет */
+  animation: fall 5s linear infinite; /* Анимация */
+  opacity: 0.3; /* Прозрачность */
+}
+
+/* Разные стартовые позиции */
+.sakura span:nth-child(1) {
+  left: 10%;
+  animation-delay: 3s;
+}
+.sakura span:nth-child(2) {
+  left: 30%;
+  animation-delay: 1s;
+}
+.sakura span:nth-child(3) {
+  left: 50%;
+  animation-delay: 5s;
+}
+.sakura span:nth-child(4) {
+  left: 70%;
+  animation-delay: 2s;
+}
+.sakura span:nth-child(5) {
+  left: 90%;
+  animation-delay: 2s;
+}
+
+/* Падение */
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 1000px;
+    transform: rotate(360deg);
+  }
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 20px; /* Большие отступы */
+}
+
+/* Заголовок */
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #947cff;
+  text-shadow: 0 0 5px #ffd6ff;
+}
+
+/* Контейнер кнопок */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Чтобы кнопки переносились */
+}
+
+/* Карточка контакта */
+.contact-card {
+  background: white;
+  width: 140px;
+  padding: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Анимация */
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Иконка контакта */
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Подпись */
+.contact-card p {
+  font-size: 1.1em;
+  margin: 0;
+}
